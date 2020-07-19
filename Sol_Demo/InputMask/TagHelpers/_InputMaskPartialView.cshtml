@@ -1,0 +1,49 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, CaptureRenderTagHelper
+
+@model InputMask.TagHelpers.InputMaskTagHelper
+
+<input id="@Model?.Id"
+       type="@Model?.Type"
+       class="@Model?.Class"
+       placeholder="@Model?.PlaceHolderName"
+       name="@Model?.For?.Name" asp-for="For.Model" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.3/jquery.inputmask.min.js" capture="InputMasklJs"></script>
+
+<script type="text/javascript" capture="ImplementInputMaskJs">
+
+    var mask = '@Html.Raw(Model?.Mask)';
+    //console.log("Mask:",mask);
+
+    var maskPlaceHolderName = '@Html.Raw(Model?.MaskPlaceHolderName)';
+    //console.log("MaskPlaceHolderName:",maskPlaceHolderName);
+
+    var id = '@Html.Raw(Model.Id)';
+    //console.log("id:", id);
+
+    var preDefinedMask = '@Html.Raw(Model.PreDefineMasks.ToString())';
+    //console.log(preDefinedMask);
+
+    if (preDefinedMask == "0") {
+
+        //console.log(true);
+
+        $("#" + id).inputmask({
+            mask: mask,
+            placeholder: maskPlaceHolderName,
+            greedy: false
+        });
+    }
+    else {
+        //console.log(false);
+        //console.log(preDefinedMask);
+        //console.log(id);
+
+        var dynamicId = $("#"+id);
+        dynamicId.inputmask({
+            alias: preDefinedMask,
+            greedy: false
+        });
+    }
+</script>

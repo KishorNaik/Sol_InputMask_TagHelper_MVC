@@ -1,0 +1,53 @@
+﻿Step 1: 
+Select Razor Class Libray Project Template and Checked Support Pages and Views
+Create a TagHelpers folder. and add InputMaskTagHelper Tag Helper Class.
+
+Step 2:
+Add following package from nuget package
+Microsoft.AspNetCore.Razor.Runtime
+
+Step 3:
+Check Input Task Tag Helper Class.
+
+Step 4:
+Add following package from nuget package
+CaptureRenderTagHelper
+
+Step 5:
+Create _InputMask Partial View inside the Tag Helper Folder. Check _InputMaskPartialView
+
+
+Step 6:
+Create a MVC Application.
+
+Step 7:
+Add a project referenace of InputMask in UI application.
+
+Step 8:
+go to _ViewImports.cshtml file and add the following Tag helper refereance
+@addTagHelper *, CaptureRenderTagHelper
+@addTagHelper *,InputMask
+
+Build the Solution.
+
+Step 9:
+go to _Layout.cshtml file.
+	
+	Add the following script inside the bottom of the end body tag.
+	<script render="InputMasklJs"></script>
+    <script render="ImplementInputMaskJs"></script>
+
+Build the solution.
+
+Step 10:
+Create a Demo Controller and View page.
+
+Step 11:
+Decorate Input Mask on View Page. Check Index.html
+
+Step 12:
+Create a Model Class. Check DemoModel class
+	
+	
+
+

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30309.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InputMask", "InputMask\InputMask.csproj", "{AA90732B-DE74-4CB5-A584-97822F34D60D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "UI\UI.csproj", "{708E0EAA-A4F8-4626-98D2-25D09D76401C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA90732B-DE74-4CB5-A584-97822F34D60D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA90732B-DE74-4CB5-A584-97822F34D60D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA90732B-DE74-4CB5-A584-97822F34D60D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA90732B-DE74-4CB5-A584-97822F34D60D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{708E0EAA-A4F8-4626-98D2-25D09D76401C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{708E0EAA-A4F8-4626-98D2-25D09D76401C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{708E0EAA-A4F8-4626-98D2-25D09D76401C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{708E0EAA-A4F8-4626-98D2-25D09D76401C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8E991D77-4050-4E4C-9510-34A7BC8FB563}
+	EndGlobalSection
+EndGlobal

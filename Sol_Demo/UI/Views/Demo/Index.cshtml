@@ -1,0 +1,87 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+@model UI.Models.DemoModel
+<h1>Index</h1>
+
+<form method="post" asp-controller="Demo" asp-action="OnSubmit">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="txtIpAddress">Ip Address</label>
+                    <jquery-inputmask id="txtIpAddress"
+                                      type="text" ,
+                                      class="form-control"
+                                      placeholder="IpAddress"
+                                      mask="9[99].9[99].9[99].9[99]"
+                                      mask-placeholder="_"
+                                      for="IpAddress"></jquery-inputmask>
+                </div>
+            </div>
+            <div class="col-6">
+                <label>Ip Address : @Model?.IpAddress</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="txtPrice">Price</label>
+                    <jquery-inputmask id="txtPrice"
+                                      type="text" ,
+                                      class="form-control"
+                                      placeholder="Price"
+                                      mask="₹ 9{*}.00"
+                                      mask-placeholder="_"
+                                      for="Price"></jquery-inputmask>
+                </div>
+            </div>
+            <div class="col-6">
+                <label>Price : @Model?.Price</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="txtDate">Date</label>
+                    <jquery-inputmask id="txtDate"
+                                      type="text" ,
+                                      class="form-control"
+                                      placeholder="Date"
+                                      mask="99/99/9999"
+                                      mask-placeholder="dd/mm/yyyy"
+                                      for="Date"></jquery-inputmask>
+                </div>
+            </div>
+            <div class="col-6">
+                <label>Date : @Model?.Date</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="txtEmailId">Email</label>
+                    <jquery-inputmask id="txtEmailId"
+                                      type="text" ,
+                                      class="form-control"
+                                      placeholder="Email Id"
+                                      pre-defined-mask="email"
+                                      for="EmailId"></jquery-inputmask>
+                </div>
+            </div>
+            <div class="col-6">
+                <label>Email Id : @Model?.EmailId</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <input type="submit" class="btn btn-dark" value="Submit" />
+            </div>
+        </div>
+    </div>
+</form>
